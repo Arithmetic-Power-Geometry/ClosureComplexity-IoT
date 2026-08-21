@@ -1,3 +1,0 @@
-case,nodes,damage,seed,scenario_seed,failure_mode,base_coverage,base_reliability,CC
-A,90,0.15,202,91702,clustered,0.8636363636363636,0.2762870338521511,8.65
-B,90,0.15,202,91702,coverage-critical,0.8574380165289256,0.2738181075109526,5.25

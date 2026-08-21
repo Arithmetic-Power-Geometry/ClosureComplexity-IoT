@@ -1,3 +1,0 @@
-selection,mask,cost,steps,selected_actions,action_kinds,coverage,reliability,latency_ms,energy_mj
-CC minimum cost,209,6.25,4,R1 + L3 + G2 + B1,restore + relay + gateway + boost,0.6818181818181818,0.60617178026532,37.7839876907138,0.1796321470603015
-CER minimum steps,224,6.4,3,G1 + G2 + B1,gateway + gateway + boost,0.6425619834710744,0.6116953451211017,31.59066292076145,0.16926715291972688
