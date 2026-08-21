@@ -1,0 +1,6 @@
+target_a,target_b,CC_a,CC_b,CC_joint,closure_interaction
+coverage,reliability,1.0,5.0,5.0,1.0
+coverage,latency,1.0,0.0,1.0,0.0
+reliability,latency,5.0,0.0,5.0,0.0
+coverage,energy,1.0,0.0,1.0,0.0
+reliability,energy,5.0,0.0,5.0,0.0

@@ -1,0 +1,40 @@
+{
+  "network_sizes": [
+    30,
+    60,
+    90
+  ],
+  "damage_rates": [
+    0.15,
+    0.3,
+    0.45
+  ],
+  "failure_modes": [
+    "random",
+    "clustered",
+    "gateway-near",
+    "peripheral",
+    "coverage-critical"
+  ],
+  "seeds": [
+    101,
+    202,
+    303
+  ],
+  "target": {
+    "coverage": 0.6,
+    "reliability": 0.6,
+    "latency_ms": 120.0,
+    "energy_mj": 7.0
+  },
+  "candidate_actions": 8,
+  "scalability_actions": [
+    8,
+    10,
+    12,
+    14,
+    16
+  ],
+  "scalability_replicates": 12,
+  "scalability_seed_base": 9000
+}
