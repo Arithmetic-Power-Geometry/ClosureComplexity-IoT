@@ -27,39 +27,3 @@ The workflow will:
 python -m pip install -r requirements.txt
 pytest -q
 python run_all.py
-```
-
-All generated outputs are placed under:
-
-```text
-results/
-├── raw/       # benchmark and repeated-seed raw CSV outputs
-├── tables/    # manuscript-ready numerical summaries
-├── figures/   # PDF and PNG figures
-└── manifest.json
-```
-
-`run_all.py` deletes the previous `results/` directory before rebuilding it, so stale or duplicate outputs cannot silently survive a reproduction run.
-
-## Main robustness upgrades
-
-The current package includes four checks intended to prevent common reviewer misinterpretations:
-
-- aggregate cost summaries are computed only over each method's feasible solutions, while paired solver comparisons use COG/NCOG;
-- the CC-versus-CER representative case exports the exact selected action masks and labels;
-- nested regressions report adjusted R² and VIF diagnostics, with degraded latency excluded from the multivariable model because it is an exact affine transform of degraded reliability in the unrepaired state under the benchmark latency equation;
-- scalability experiments repeat GA, PSO, NSGA-II, and Random Search across 12 independent algorithm seeds for every action-space size and report median/IQR NCOG and exact-hit rates.
-
-## Reproducibility design
-
-The principal benchmark uses fixed network seeds and a declared eight-action repair universe. The scaling study holds the damaged network realization fixed while varying only the candidate-action universe and algorithmic random seeds. Exact CC is always the reference quantity; heuristic algorithms are evaluated by their gap to that exact target-relative minimum.
-
-The wireless equations are controlled benchmark abstractions and are not presented as site-specific RF calibration. The code is intended to reproduce the manuscript's computational claims exactly under the pinned environment.
-
-## License
-
-Apache License 2.0. See `LICENSE` and `NOTICE`.
-
-## Citation
-
-See `CITATION.cff` and the accompanying manuscript.
